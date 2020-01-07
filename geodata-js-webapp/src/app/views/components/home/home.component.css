@@ -1,0 +1,47 @@
+.jumbotron{
+      background-image: url('assets/picture/big-data.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: auto;
+      min-height: 500px;
+      z-index: -1
+     }
+
+.text-white{
+     padding: 3rem;
+     color : #f7f7f7;
+     margin-right: auto;
+     margin-left: auto;
+     position: flex;
+     width: 100%;
+     text-align: center
+}
+
+.mat-card-content{
+  text-align: center;
+}
+
+
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('assets/picture/logo.jpg');
+  background-size: cover;
+}
+
+
+.content {
+  max-height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+

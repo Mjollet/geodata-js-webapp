@@ -1,0 +1,47 @@
+ .header{
+   margin: 5px;
+   padding: 5px;;
+ }
+ 
+ .input{
+  width: 300px !important;
+  margin: 5px;
+ }
+
+ .card {
+    min-width: 80%;
+  }
+  
+  .container {
+    display: inline-block;
+    max-height: 500px;
+    min-width: 100%;
+   
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+  a {
+    cursor: pointer;
+  }
+
+  .mat-raised-button{
+    margin: 3rem;
+  }
+
+  .mat-form-field{
+    width : 100%;
+    height: 300px;
+  }
+
+  .formInput {
+  margin: 10px;
+  padding: 10px;
+  }

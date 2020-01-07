@@ -1,0 +1,71 @@
+<!-- Bannière -->
+<div class="jumbotron text-center">
+
+  <div class="text-white">
+    <div id="token-button">
+      <button mat-raised-button (click)="getinfo()"><span matBadge="0"> get Token</span></button>
+    </div>
+    <h1>
+      Bienvenue chez Isogeo
+    </h1>
+    <h2>
+      Vous cherchez vos fiches de métadonnées ?
+    </h2>
+    <a mat-raised-button routerLink="/search"> Start </a>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="flexcontainer">
+    <div fxLayout="row" fxLayoutAlign="space-around center" class="content">
+
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Contacts</mat-card-title>
+          <mat-card-subtitle>A quelle échelle </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/picture/geo1.jpg" alt="contact">
+        <mat-card-content>
+          <p>
+            Savoir vers qui se tourner selon les situations
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Consulter</mat-card-title>
+          <mat-card-subtitle>Fiches de vos métadonnées</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/picture/search1.png" alt="">
+        <mat-card-content>
+          <p>
+            Dossiers référencés pour vous simplifiez la vie
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Editer</mat-card-title>
+          <mat-card-subtitle>Changement en vue</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/picture/geo1.jpg" alt="edit">
+        <mat-card-content>
+          <p>
+            Vous êtes maître du management de vos données
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="search-contener">
+
+  <br>
+  <div class="container">
+    <div class="container">
+      <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row" fxLayoutAlign="space-around center"
+        class="content">
+        <div class="blocks">
+          <button button="submit" mat-raised-button color="primary">
+            <mat-icon>add</mat-icon> Comment
+          </button>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container">
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="card">
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <h3>Metadata Search</h3>
+            <h4></h4>
+          </mat-card-title>
+          <div id="search-component">
+            <mat-form-field>
+              <mat-label>Keyword</mat-label>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+          </div>
+          <mat-card-content>
+
+
+            <div class="example-container">
+              <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+            
+                <ng-container matColumnDef="type">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Type</mat-header-cell>
+                  <mat-cell *matCellDef="let metadata">{{metadata.type}}</mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="title">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Title</mat-header-cell>
+                  <mat-cell *matCellDef="let metadata">{{metadata.title}}</mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="_id">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>ID number</mat-header-cell>
+                  <mat-cell *matCellDef="let metadata">{{metadata._id}}</mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let metadata; columns: displayedColumns;" routerLink="/edit/{{metadata.title}}" class="row-hover">
+                  </mat-row>
+               
+              </table>
+              <mat-paginator [length]="15" [pageSize]="15" [pageSizeOptions]="[5,10,20]" showFirstLastButtons>
+              </mat-paginator>
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

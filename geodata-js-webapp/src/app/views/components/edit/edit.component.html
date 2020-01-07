@@ -1,0 +1,59 @@
+<div *ngIf="metadata">
+
+
+    <div class="container">
+        <div class="header">
+            <button mat-raised-button (click)="backtoList()" style="float: left;">go back</button>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center center" class="content">
+            <mat-card class="card">
+                <h1> ID : </h1> {{metadata._id}}
+                <label><h2>You want to edit:</h2> <h3>{{metadata.title | uppercase}}</h3></label>
+                <mat-card-content>
+                    <form mat-form-field (ngSubmit)="save()" ngNativeValidate>
+
+
+                        <div class="formInput">
+                            <label><h3>Title:</h3></label>
+                            <input [(ngModel)]="editTitle" name="title" id="title" placeholder="Title" />
+                        </div>
+
+                        <div class="formInput">
+                            <label><h3>Id number</h3></label>
+                            <input [(ngModel)]="editId" name="_id" id="_id" placeholder="_id" />
+                        </div>
+
+                        <fieldset>
+                            <legend>Creator:</legend>
+                            <address>
+
+                                <input [(ngModel)]="editCreator._id" name="_id" id="id"><br>
+                                <input [(ngModel)]="editCreator._created" name="_created" id="_created"><br>
+                                <input [(ngModel)]="editCreator._modified" name="_modified" id="_modified"><br>
+
+                            </address>
+                        </fieldset>
+                            <br>
+                            <fieldset>
+                            <legend>Contact:</legend>
+                            <address>
+                                <input [(ngModel)]="metadata._creator.contact.name" name="name"><br>
+                                <input [(ngModel)]="metadata._creator.contact.city" name="city"><br>
+                                <input [(ngModel)]="metadata._creator.contact.phone" name="phone" id="phone"><br>
+                                <input [(ngModel)]="metadata._creator.contact.addressLine1" name="addressLine1"
+                                    id="addressLine1"><br>
+                                <input [(ngModel)]="metadata._creator.contact.email" name="email" id="email"><br>
+                                <input [(ngModel)]="metadata._creator.contact._tag" name="_tag" id="_tag"><br>
+
+                            </address>
+                        </fieldset>
+                        <button mat-raised-button (click)="save()" id="save">Save</button>
+                        <button mat-raised-button (click)="cancel()" id="cancel">Cancel</button>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+    </div>
+</div>

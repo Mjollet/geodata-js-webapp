@@ -1,0 +1,47 @@
+
+.card {
+    min-width: 80%;
+  }
+  
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    min-width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 100%;
+  }
+
+  /* First column and header */
+  .mat-header-cell:first-child,.mat-cell:first-child{
+    flex:20%;
+  }
+  /* Second column and header */
+  .mat-header-cell:nth-child(2),.mat-cell:nth-child(2){
+    flex:50%;
+  }
+  /* Last column and header */
+  .mat-header-cell:last-child,.mat-cell:last-child{
+    flex:30%
+  }
+  
+  .row-hover:hover {
+    background-color: rgba(0, 0, 0, .05);
+    cursor: pointer;
+  }
+
+.button {
+  margin-right: 3rem;
+  float: right !important ;
+}
+
+.mat-card{
+  padding : 3rem;
+}
+
+.content {
+  padding-bottom: 3rem;
+}
